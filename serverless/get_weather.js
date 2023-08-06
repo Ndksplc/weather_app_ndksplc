@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 
 const {WEATHER_API_KEY} = process.env
 console.log(WEATHER_API_KEY);
