@@ -4,13 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "watch:sass": "node-sass -w scss/ -o dist/css",
+     "scss": "sass --watch scss:dist/css --style compressed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "nodemon": "^3.0.1",
+    "npm-watch": "^0.11.0"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
   }
 }
