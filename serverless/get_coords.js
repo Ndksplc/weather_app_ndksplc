@@ -10,9 +10,10 @@ exports.handler = async(event, context) =>{
   try {
     const datastream = await fetch(encodeUrl);
     const Jsondata = await datastream.json();
+    console.log(Jsondata);
     return {
       statusCode: 200,
-      body: JSON.stringify(weatherJson)
+      body: JSON.stringify(Jsondata)
     };
   } catch(err){
     return {statusCode: 422,
