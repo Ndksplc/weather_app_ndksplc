@@ -5,23 +5,15 @@ export const setLocationObj = (locationObj, myCoordonneesObj)=>{
   locationObj.setName(name);
   if(unit) locationObj.setUnit(unit);
 }
+
+
 export const getHomeLocation = () => {
   return localStorage.getItem('defaultWeatherLocation');
 }
-export const getWeatherFromCoords = async(locationObj)=>{
-  const latitude = locationObj.getLatitude();
-  const  longitude = locationObj.getLongitude();
-  const url = `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${latitude},${longitude}&days=3&aqi=yes&alerts=yes`;
-  try{
-    const weatherstream = await fetch(url);
-    const weatherJson = await weatherstream.json();
-    return weatherJson;
-  }
-  catch(err) {
-    console.error(err);
-  }
 
-  /*const urlDataObj = {
+
+export const getWeatherFromCoords = async(locationObj)=>{
+  const urlDataObj = {
     latitude : locationObj.getLatitude(),
     longitude : locationObj.getLongitude(),
     
@@ -45,25 +37,12 @@ export const getWeatherFromCoords = async(locationObj)=>{
     console.log('dans catch');
     console.error(err);
 
-  }*/
+  }
 
 
 }
 export const getCoordsFromApi = async(entryText, air_quality_data = 'no') =>{
-  const url = `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${entryText}&days=3&aqi=${air_quality_data}&alerts=yes`
-  const encodeUrl = encodeURI(url);
-  try {
-    const datastream = await fetch(encodeUrl);
-    const Jsondata = await datastream.json();
-    
-  
-    return Jsondata;
-
-
-  } catch (err) {
-    console.error(err.stack);
-  }
-/*const urlDataObj ={
+const urlDataObj ={
   text : entryText,
   air_quality_data : air_quality_data
 }
@@ -77,7 +56,7 @@ try{
 }catch(err){
   console.error(err);
 
-}*/
+}
 
 }
 export const cleanText = (text) =>{
