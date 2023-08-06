@@ -36,12 +36,10 @@ export const getWeatherFromCoords = async(locationObj)=>{
     }
     
     const weatherJson = await weatherstream.json();
-    
-    console.log(weatherJson);
+   
     return weatherJson;
   }
   catch(err) {
-    console.log('dans catch');
     console.error(err);
 
   }
@@ -61,6 +59,7 @@ try{
   const Jsondata = await datastream.json();
   return Jsondata;
 }catch(err){
+  console.log('dans catch');
   console.error(err);
 
 }
