@@ -13,6 +13,7 @@ exports.handler = async (event, context) =>{
   try{
     const weatherStream = await fetch(url);
     const weatherJson = await weatherStream.json();
+    console.log(JSON.stringify(weatherJson));
     return {
       statusCode: 200,
       body: JSON.stringify(weatherJson)

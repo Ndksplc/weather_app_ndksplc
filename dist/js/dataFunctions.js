@@ -13,16 +13,23 @@ export const getHomeLocation = () => {
 
 
 export const getWeatherFromCoords = async(locationObj)=>{
-  const urlDataObj = {
+  
+  const latitude = locationObj.getLatitude();
+  const longitude = locationObj.getLongitude();
+  const params = JSON.stringify({
+    latitude: latitude,
+    longitude: longitude
+  });
+  /*const urlDataObj = {
     latitude : locationObj.getLatitude(),
     longitude : locationObj.getLongitude(),
     
 
   }
 
-  const urlDataObJson = JSON.stringify(urlDataObj);
+  const urlDataObJson = JSON.stringify(urlDataObj);*/
   try{
-    const weatherstream = await fetch("/.netlify/functions/get_weather", {method: "POST", body: urlDataObJson });
+    const weatherstream = await fetch("/.netlify/functions/get_weather", {method: 'POST', body: params });
     if (!weatherstream.ok) {
       // Gère l'erreur ici
       throw new Error('Erreur de réseau lors de la demande à l\'API météo');
