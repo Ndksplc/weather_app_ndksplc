@@ -29,7 +29,7 @@ export const getWeatherFromCoords = async(locationObj)=>{
 
   const urlDataObJson = JSON.stringify(urlDataObj);*/
   try{
-    const weatherstream = await fetch("/.netlify/functions/get_weather", {method: 'POST', body: params });
+    const weatherstream = await fetch("./.netlify/functions/get_weather", {method: 'POST', body: params });
     if (!weatherstream.ok) {
       // Gère l'erreur ici
       throw new Error('Erreur de réseau lors de la demande à l\'API météo');
@@ -54,7 +54,7 @@ const urlDataObj ={
   air_quality_data : air_quality_data
 }
 try{
-  const datastream = await fetch('/.netlify/functions/get_coords', {
+  const datastream = await fetch('./.netlify/functions/get_coords', {
     method: "POST",
     body : JSON.stringify(urlDataObj)
   });
