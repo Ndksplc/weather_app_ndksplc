@@ -1,62 +1,62 @@
 // Day
 .clear-sky{
   background-color: $background-color;
-  background-image: url("../img/sunny.jpeg");
+  background-image: url("/img/sunny.jpeg");
 }
 
 .rainy_day{
   background-color: $background-color;
-  background-image: url("../img/rainy-day.jpeg");
+  background-image: url("/img/rainy-day.jpeg");
 }
 .rainstorm{
   background-color: $background-color;
-  background-image: url("../img/rain_storm.jpeg");
+  background-image: url("/img/rain_storm.jpeg");
 }
 .snow{
 background-color: $background-color;
-  background-image: url("../img/snow.jpeg");
+  background-image: url("/img/snow.jpeg");
 }
 
 .fog_day{
 background-color: $fog-color;
-  background-image: url("../img/fog_day.jpeg");
+  background-image: url("/img/fog_day.jpeg");
 }
 .cloudy_day{
   background-color: $background-color;
-  background-image: url("../img/cloudy_day.jpeg");
+  background-image: url("/img/cloudy_day.jpeg");
 }
 .thunder{
   background-color: $background-color;
-  background-image: url("../img/thunder_outbreak.jpeg");
+  background-image: url("/img/thunder_outbreak.jpeg");
 }
 .pellet{
   background-color: $background-color;
-  background-image: url("../img/ice_pellet.jpeg");
+  background-image: url("/img/ice_pellet.jpeg");
 }
 
 //Night
 
 .night{
 background-color: $night-color;
-  background-image: url("../img/night.jpeg");
+  background-image: url("/img/night.jpeg");
 }
 .cloudy_night{
   background-color: $background-color;
-  background-image: url("../img/cloudy_night.jpeg");
+  background-image: url("/img/cloudy_night.jpeg");
 }
 .fog_night{
   background-color: $night-color;
-  background-image: url("../img/fog_night.jpeg");
+  background-image: url("/img/fog_night.jpeg");
 }
 .rainy_night{
   background-color: $background-color;
-  background-image: url("../img/rainy_night.jpeg");
+  background-image: url("/img/rainy_night.jpeg");
 }
 .snowtorm_night{
   background-color: $night-color;
-  background-image: url("../img/snow_storm_nigth.jpeg");
+  background-image: url("/img/snow_storm_nigth.jpeg");
 }
 .snow_nigth{
   background-color: $night-color;
-  background-image: url("../img/snow_night.jpeg");
+  background-image: url("/img/snow_night.jpeg");
 }
